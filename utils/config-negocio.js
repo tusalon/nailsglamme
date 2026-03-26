@@ -1,12 +1,12 @@
 // utils/config-negocio.js - VERSIÓN MULTI-TENANT CORREGIDA
-// CLIENTE: Salón  Beauty Nails
+// CLIENTE: Nails Glam me 
 
 console.log('🏢 config-negocio.js cargado');
 
 // ============================================
 // 🔥 CONFIGURACIÓN POR CLIENTE - ¡LO ÚNICO QUE CAMBIA!
 // ============================================
-const NEGOCIO_ID_POR_DEFECTO = '14970faa-55f7-41f8-9873-7d54fc21c304'; // ID de Salón  Beauty Nails
+const NEGOCIO_ID_POR_DEFECTO = '2f57f838-b72f-4330-9513-a8acbe8edcce'; // ID de Nails Glam me 
 
 // Hacer accesible globalmente
 window.NEGOCIO_ID_POR_DEFECTO = NEGOCIO_ID_POR_DEFECTO;
@@ -116,7 +116,7 @@ window.cargarConfiguracionNegocio = async function(forceRefresh = false) {
  */
 window.getNombreNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.nombre || 'Salón  Beauty Nails';
+    return config?.nombre || 'Nails Glam me ';
 };
 
 /**
@@ -124,7 +124,7 @@ window.getNombreNegocio = async function() {
  */
 window.getTelefonoDuenno = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.telefono || '54005820';
+    return config?.telefono || '55497195';
 };
 
 /**
@@ -132,7 +132,7 @@ window.getTelefonoDuenno = async function() {
  */
 window.getEmailNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.email || 'Oneleydisb@gmail.com';
+    return config?.email || 'amandaeq1998@icloud.com';
 };
 
 /**
@@ -164,7 +164,7 @@ window.getHorarioAtencion = async function() {
  */
 window.getMensajeBienvenida = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.mensaje_bienvenida || '¡Bienvenida a Salón  Beauty Nails!';
+    return config?.mensaje_bienvenida || '¡Bienvenida a Nails Glam me !';
 };
 
 /**
@@ -180,7 +180,7 @@ window.getMensajeConfirmacion = async function() {
  */
 window.getNtfyTopic = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.ntfy_topic || 'salonbeautynails';
+    return config?.ntfy_topic || 'nailsglamme';
 };
 
 /**
@@ -205,5 +205,5 @@ setTimeout(async () => {
     await window.cargarConfiguracionNegocio();
 }, 500);
 
-console.log('✅ config-negocio.js listo para Salón  Beauty Nails');
+console.log('✅ config-negocio.js listo para Nails Glam me ');
 console.log('🏷️  ID configurado:', NEGOCIO_ID_POR_DEFECTO);

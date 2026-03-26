@@ -1,22 +1,22 @@
-// sw.js - Service Worker para Salón  Beauty Nails
+// sw.js - Service Worker para Nails Glam me 
 
-const CACHE_NAME = 'salonbeautynails-v1';
+const CACHE_NAME = 'nailsglamme-v1';
 const urlsToCache = [
-  '/salonbeautynails/',
-  '/salonbeautynails/index.html',
-  '/salonbeautynails/admin.html',
-  '/salonbeautynails/admin-login.html',
-  '/salonbeautynails/setup-wizard.html',
-  '/salonbeautynails/editar-negocio.html',
-  '/salonbeautynails/manifest.json',
-  '/salonbeautynails/icons/icon-72x72.png',
-  '/salonbeautynails/icons/icon-96x96.png',
-  '/salonbeautynails/icons/icon-128x128.png',
-  '/salonbeautynails/icons/icon-144x144.png',
-  '/salonbeautynails/icons/icon-152x152.png',
-  '/salonbeautynails/icons/icon-192x192.png',
-  '/salonbeautynails/icons/icon-384x384.png',
-  '/salonbeautynails/icons/icon-512x512.png'
+  '/nailsglamme/',
+  '/nailsglamme/index.html',
+  '/nailsglamme/admin.html',
+  '/nailsglamme/admin-login.html',
+  '/nailsglamme/setup-wizard.html',
+  '/nailsglamme/editar-negocio.html',
+  '/nailsglamme/manifest.json',
+  '/nailsglamme/icons/icon-72x72.png',
+  '/nailsglamme/icons/icon-96x96.png',
+  '/nailsglamme/icons/icon-128x128.png',
+  '/nailsglamme/icons/icon-144x144.png',
+  '/nailsglamme/icons/icon-152x152.png',
+  '/nailsglamme/icons/icon-192x192.png',
+  '/nailsglamme/icons/icon-384x384.png',
+  '/nailsglamme/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/salonbeautynails/icons/icon-192x192.png');
+            return caches.match('/nailsglamme/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para Salón  Beauty Nails');
+console.log('✅ Service Worker configurado para Nails Glam me ');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);
